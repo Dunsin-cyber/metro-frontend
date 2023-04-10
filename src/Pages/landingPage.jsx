@@ -6,8 +6,16 @@ import Menu from '../components/Menu'
 import Table from '../components/Table'
 import Footer from '../components/Footer'
 import BreadCrumb from '../components/BreadCrumb'
+import {useNavigate} from "react-router-dom"
 
-function landingPage() {
+function LandingPage() {
+  const nav = useNavigate()
+
+  const handleNav = () => {
+    
+    nav("/building")
+  
+}
   return (
     <div>
       <Navbar/>
@@ -33,7 +41,7 @@ function landingPage() {
       <Table/>
       <Box h="100px"/>
       <Flex justifyContent="center" align="center">
-      <Button bgColor="#003049" color="white"> Manage Properties</Button>
+      <Button bgColor="#003049" color="white" onClick={handleNav}> Manage Properties</Button>
       </Flex>
       <Box h="100px"/>
       <Footer/>
@@ -41,4 +49,4 @@ function landingPage() {
   )
 }
 
-export default landingPage
+export default LandingPage
