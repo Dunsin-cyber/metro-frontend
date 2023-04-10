@@ -6,6 +6,7 @@ import BreadCrumb from '../components/BreadCrumb'
 import Menu from '../components/Menu'
 import Footer from '../components/Footer'
 import {useNavigate} from "react-router-dom"
+import Entries from '../components/Building/Entries'
 
 
 
@@ -55,9 +56,9 @@ function Building() {
       </Box>
 
       <Flex my={8} justifyContent="center" align="center">
-      <Button bgColor="#003049" color="white" onClick={handleNav 
-    }> Floors</Button>
+      <Button bgColor="#003049" color="white" onClick={handleNav}> Floors</Button>
       </Flex>
+      <Entries/>
       <Footer/>
       
     </Box>
