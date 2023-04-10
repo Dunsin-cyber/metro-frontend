@@ -1,13 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from "react-router-dom";
+import { ChakraProvider } from '@chakra-ui/react'
 import './index.css';
 import App from './App';
+import theme from "./theme"
 import reportWebVitals from './reportWebVitals';
+
+import '@fontsource/poppins/100.css'
+import '@fontsource/poppins/200.css'
+import '@fontsource/poppins/300.css'
+import '@fontsource/poppins/400.css'
+import '@fontsource/poppins/500.css'
+import '@fontsource/poppins/600.css'
+import '@fontsource/poppins/700.css'
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <BrowserRouter>
+    <ChakraProvider theme={theme}>
     <App />
+    </ChakraProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 
